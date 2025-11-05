@@ -1,0 +1,47 @@
+<%= layout("./layouts/boilerplate.ejs") %>
+<body>
+    <div class="row mt-4">
+        <div class="col-8 offset-2">
+            <form method="post" action="/listings/<%=indidata._id%>?_method=put" class="needs-validation"  enctype="multipart/form-data">
+
+        <div class="mb-3">
+             <label for="title" class="form-lable">Title</label>
+             <input name="listing[title]"  id="title"  value="<%=indidata.title%>"  type="text" class="form-control"  required>
+             <div class="valid-feedback">Title Looks Good!</div>
+            </div>
+        <div class="mb-3">
+            <label for="description" class="form-lable">Description</label>
+            <textarea name="listing[description]"  id="description" class="form-control"  type="text" required><%= indidata.description %></textarea>
+          <div class="valid-feedback">Description Looks Good!</div>
+        </div>
+        <div class="mb-3">
+             <label for="image" class="form-lable">New Image</label>
+             <input name="listing[image]" id="image" type="file" class="form-control">
+            </div>
+
+     <div class="mb-3">
+        <label for="location" class="form-lable">location</label>
+    <input name="listing[location]" id="location"  value="<%=indidata.location%>" type="text" class="form-control"  required>
+    
+     <div class="invalid-feedback">Location Should Be Valid!</div>
+    </div>
+   
+    <div class="row">
+        
+    <div class="mb-3 col-md-4">
+        <label for="price" class="form-lable">price</label>
+        <input name="listing[price]" id="price" value="<%=indidata.price%>"  class="form-control"  required>
+        <div class="invalid-feedback">Please Enter a valid Price!</div>
+    </div>
+   <div class="mb-3 col-md-8">
+        <label for="country" class="form-lable">country</label>
+        <input name="listing[country]" id="country" value="<%=indidata.country%>" type="text" class="form-control"  required>
+   <div class="invalid-feedback">Country Name Should Be Valid!</div>
+    </div>
+    </div>
+    <button class=" btn btn-dark add-btn mb-3">Edit</button>
+    </form>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>

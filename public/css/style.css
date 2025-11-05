@@ -1,0 +1,114 @@
+body{
+    font-family:"Plus Jakarta Sans" !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color:white;
+}
+.fa-compass{
+    color: #dc0b19;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flext;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.3rems;
+    margin-right: 1.5rem;
+}
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body  {
+    padding: 0 !important;
+}
+.card-text p {
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.3;
+    background-color: white;
+}
+.add-btn{
+    background-color:#dc0b19 !important;
+    border: none !important;
+}
+.show-img{
+    height: 30vh;
+    width:40rem !important;
+    border-radius: 2rem !important;
+
+}
+.btns{
+    display: flex;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+   .heading-gradient {
+      background: linear-gradient(90deg, #007bff, #6610f2, #e83e8c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bulge-animation {
+      display: inline-block;
+      animation: bulge 3.5s ease-in-out infinite;
+    }
+
+    @keyframes bulge {
+      0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(102, 16, 242, 0.4);
+      }
+      50% {
+        transform: scale(1.15);
+        text-shadow: 0 0 25px rgba(232, 62, 140, 0.6);
+      }
+    }
