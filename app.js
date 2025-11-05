@@ -69,7 +69,7 @@ app.use((req,res,next)=>{
   res.locals.success =  req.flash("success");
   res.locals.error = req.flash("error");
   res.locals.currentUser = req.user;
-    res.locals.currentUser = req.session.user || null;
+  res.locals.currentUser = req.session.user || null;
   console.log("the currUser" +res.locals.currentUser);
   next();
 })
@@ -85,6 +85,11 @@ main()
 async function main() {
   await mongoose.connect(dburl);
 }
+
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
