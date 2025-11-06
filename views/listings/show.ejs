@@ -41,7 +41,7 @@
  
 <div class="col-8 offset-2 mb-3 mt-3">
       
-    <% if(currentUser) { %>
+    <% if(currentUser || currentUser == "null") { %>
         <hr>
     <h4>Leave a Review</h4>
     <form action="/listings/<%=indidata._id %>/reviews" method="post" novalidate class="needs-validation">
