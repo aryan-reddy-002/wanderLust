@@ -104,8 +104,9 @@ app.use("/",userRouter);
 
 
 
-app.listen(8080,()=>{
-    console.log("this is basic response !!");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
 });
 
 
